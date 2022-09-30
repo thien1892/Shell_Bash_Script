@@ -21,3 +21,19 @@
 ### 4. Descriptive stats on CSV data files
 - documentation: ```csvstat -h```
 - syntax: ```csvstat file.csv```
+### 5. Filtering data by column
+- documentation: ```csvcut -h```
+- print all column names: ```csvcut -n file_name.csv```
+- returns the first column in the data: ```csvcut -c 1 file_name.csv```
+- returns the column in the data by name:
+```csvcut -c "col name" file_name.csv```
+- returns the multi columns in the data:
+```csvcut -c 1,2,3 file_name.csv```
+- returns the multi columns in the data by name:
+```csvcut -c "col name1","col name2" file_name.csv```
+### 6. Filtering data by row value
+- documentation: ```csvgrep -h```
+- -m : followed by the exact row value to filter
+- -r : followed with a regex paern
+- -f : followed by the path to a file
+- filter data where value in first column is 'sample': ```csvgrep -c 1 -m "sample" file_name.csv```
