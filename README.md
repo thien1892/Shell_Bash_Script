@@ -36,4 +36,10 @@
 - -m : followed by the exact row value to filter
 - -r : followed with a regex paern
 - -f : followed by the path to a file
-- filter data where value in first column is 'sample': ```csvgrep -c 1 -m "sample" file_name.csv```
+- filter data where value in first column is 'sample': ```csvgrep -c 1 -m sample file_name.csv```
+### 7. Stacking multiple CSV files
+- documentation: ```csvstack -h```
+- stack files csv: ```csvstack file_imput1.csv file_imput2.csv > file_output.csv```
+- stack with create col name group: ```csvstack -g "name1","name2" file_input1.csv file_input2.csv > file_output.csv```
+- stack with create col name group and sort by soure:
+```csvstack -g "name1","name2" -n "soure" file_input1.csv file_input2.csv > file_output.csv```
