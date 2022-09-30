@@ -43,3 +43,6 @@
 - stack with create col name group: ```csvstack -g "name1","name2" file_input1.csv file_input2.csv > file_output.csv```
 - stack with create col name group and sort by soure:
 ```csvstack -g "name1","name2" -n "soure" file_input1.csv file_input2.csv > file_output.csv```
+
+## Database Operations on the Command Line
+
